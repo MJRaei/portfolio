@@ -2,15 +2,15 @@ import { PersonalInfo } from "@/types";
 
 export const personalInfo: PersonalInfo = {
   name: "Mohammad Javad Raei",
-  title: "Full-Stack Developer",
+  title: "Scientific Software Developer",
   email: "hello@johndoe.dev",
   location: "San Francisco, CA",
-  bio: "I build modern web applications with a focus on performance, accessibility, and clean design.",
+  bio: "I build tools at the intersection of chemical engineering, materials science, and agentic AI to accelerate scientific discovery.",
   aboutParagraphs: [
     "I'm a full-stack developer with a passion for building elegant solutions to complex problems. With experience across the entire web stack, I enjoy working on projects that challenge me to learn and grow.",
     "When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying the outdoors.",
   ],
-  avatarUrl: "/images/profile.jpg",
+  avatarUrl: "/images/personal/my-picture.jpg",
   resumeUrl: "/files/resume.pdf",
   socialLinks: [
     { platform: "GitHub", url: "https://github.com/johndoe", icon: "Github" },
