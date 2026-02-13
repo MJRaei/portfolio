@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollToTop } from "@/components/ui/scroll-to-top";
+import { ScrollBackground } from "@/components/ui/scroll-background";
 import { siteConfig } from "@/lib/constants";
 import "./globals.css";
 
@@ -46,6 +47,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} font-sans antialiased`}>
         <ThemeProvider>
+          <ScrollBackground />
           <Header />
           <main>{children}</main>
           <Footer />
