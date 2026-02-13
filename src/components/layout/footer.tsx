@@ -1,10 +1,10 @@
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Github, Linkedin, GraduationCap } from "lucide-react";
 import { personalInfo } from "@/data/personal";
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Github,
   Linkedin,
-  Twitter,
+  GraduationCap,
 };
 
 export function Footer() {
