@@ -2,18 +2,21 @@ import { Experience } from "@/types";
 
 export const experiences: Experience[] = [
   {
-    company: "Tech Corp",
-    role: "Senior Full-Stack Developer",
-    location: "San Francisco, CA",
-    startDate: "2023-06",
+    company: "Opla Energy",
+    role: "Software Developer",
+    location: "Alberta, Canada",
+    startDate: "2024-12",
     endDate: null,
     description: [
-      "Lead development of customer-facing web applications serving 100K+ monthly active users",
-      "Architected a micro-frontend system that improved team deployment velocity by 40%",
-      "Mentored junior developers through code reviews and pair programming sessions",
+      "Develop and maintain full-stack desktop applications using Python and QML for scientific calculations and real-time data processing",
+      "Build interactive data visualization dashboards and automation modules that generate dynamic reports, reducing manual effort and improving data consistency",
+      "Refactor legacy codebases and implement performance optimizations to improve application speed, scalability, and maintainability",
+      "Architect REST APIs and cloud-based services on AWS (EC2, S3, Lambda) for software distribution and version management",
+      "Create modular, cross-platform application architectures with a focus on maintainability, performance, and user experience",
+      "Write comprehensive test suites with pytest to ensure code reliability and maintain high software quality standards"
     ],
-    technologies: ["Next.js", "TypeScript", "Node.js", "PostgreSQL", "AWS"],
-    companyUrl: "https://example.com",
+    technologies: ["Python", "QML", "Plotly", "REST APIs", "Git", "AWS (EC2, S3, Lambda)", "pytest", "Linux"],
+    companyUrl: "https://oplaenergy.com/",
   },
   {
     company: "StartupXYZ",
