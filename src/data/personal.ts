@@ -1,7 +1,7 @@
 import { PersonalInfo } from "@/types";
 
 export const personalInfo: PersonalInfo = {
-  name: "John Doe",
+  name: "Mohammad Javad Raei",
   title: "Full-Stack Developer",
   email: "hello@johndoe.dev",
   location: "San Francisco, CA",

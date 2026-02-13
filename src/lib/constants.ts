@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "John Doe",
+  name: "Mohammad Javad Raei",
   url: "https://johndoe.dev",
   description: "Full-Stack Developer portfolio showcasing projects, experience, and skills.",
 };
