@@ -16,18 +16,31 @@ export interface PersonalInfo {
   socialLinks: SocialLink[];
 }
 
+export interface ProjectSection {
+  title: string;
+  content: string;
+  bullets?: string[];
+  image?: {
+    src: string;
+    alt: string;
+    caption?: string;
+  };
+}
+
 export interface Project {
   slug: string;
   title: string;
   summary: string;
   description: string;
   thumbnailUrl: string;
+  heroUrl?: string;
   images: string[];
   tags: string[];
   liveUrl?: string;
   sourceUrl?: string;
   featured: boolean;
   date: string;
+  sections?: ProjectSection[];
 }
 
 export interface Experience {

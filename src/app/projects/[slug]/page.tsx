@@ -7,6 +7,7 @@ import { projects } from "@/data/projects";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/motion/fade-in";
+import { ProjectSection } from "@/types";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -24,6 +25,68 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: project.title,
     description: project.summary,
   };
+}
+
+function Section({ section, index }: { section: ProjectSection; index: number }) {
+  return (
+    <FadeIn delay={0.1 * index}>
+      <div className="mb-12">
+        <h2 className="mb-4 text-xl font-semibold tracking-tight">{section.title}</h2>
+
+        {section.content.split("\n\n").map((paragraph, i) => (
+          <p key={i} className="mb-4 text-muted-foreground leading-relaxed">
+            {paragraph}
+          </p>
+        ))}
+
+        {section.bullets && (
+          <ul className="mb-4 space-y-2 pl-1">
+            {section.bullets.map((bullet, i) => {
+              const dashIdx = bullet.indexOf(" — ");
+              return (
+                <li key={i} className="flex gap-2 text-muted-foreground leading-relaxed">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                  <span>
+                    {dashIdx !== -1 ? (
+                      <>
+                        <span className="font-medium text-foreground">
+                          {bullet.slice(0, dashIdx)}
+                        </span>
+                        {" — "}
+                        {bullet.slice(dashIdx + 3)}
+                      </>
+                    ) : (
+                      bullet
+                    )}
+                  </span>
+                </li>
+              );
+            })}
+          </ul>
+        )}
+
+        {section.image && (
+          <figure className="mt-6">
+            <div className="relative aspect-video overflow-hidden rounded-xl border border-border bg-muted">
+              <Image
+                src={section.image.src}
+                alt={section.image.alt}
+                fill
+                className="object-cover"
+                sizes="768px"
+                unoptimized={section.image.src.endsWith(".gif")}
+              />
+            </div>
+            {section.image.caption && (
+              <figcaption className="mt-2 text-center text-sm text-muted-foreground">
+                {section.image.caption}
+              </figcaption>
+            )}
+          </figure>
+        )}
+      </div>
+    </FadeIn>
+  );
 }
 
 export default async function ProjectPage({ params }: Props) {
@@ -55,12 +118,13 @@ export default async function ProjectPage({ params }: Props) {
       <FadeIn delay={0.2}>
         <div className="relative mb-8 aspect-video overflow-hidden rounded-xl border border-border bg-muted">
           <Image
-            src={project.thumbnailUrl}
+            src={project.heroUrl ?? project.thumbnailUrl}
             alt={project.title}
             fill
             className="object-cover"
             sizes="768px"
             priority
+            unoptimized={(project.heroUrl ?? project.thumbnailUrl).endsWith(".gif")}
           />
         </div>
       </FadeIn>
@@ -68,7 +132,7 @@ export default async function ProjectPage({ params }: Props) {
       <FadeIn delay={0.3}>
         <p className="mb-8 text-muted-foreground leading-relaxed">{project.description}</p>
 
-        <div className="flex flex-wrap gap-3">
+        <div className="mb-12 flex flex-wrap gap-3">
           {project.liveUrl && (
             <Button href={project.liveUrl} target="_blank" rel="noopener noreferrer">
               <ExternalLink className="h-4 w-4" /> Live Demo
@@ -81,6 +145,14 @@ export default async function ProjectPage({ params }: Props) {
           )}
         </div>
       </FadeIn>
+
+      {project.sections && (
+        <div className="border-t border-border pt-10">
+          {project.sections.map((section, i) => (
+            <Section key={section.title} section={section} index={i} />
+          ))}
+        </div>
+      )}
     </div>
   );
 }
