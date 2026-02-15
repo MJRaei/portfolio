@@ -10,7 +10,8 @@ export const nanorangeV1: Project = {
   thumbnailUrl: "https://placehold.co/800x450/1a1a2e/e0e0e0?text=NanoRange+V1",
   images: ["https://placehold.co/800x450/1a1a2e/e0e0e0?text=NanoRange+V1"],
   tags: ["Python", "OpenCV", "scikit-image", "Flask", "React", "Tailwind CSS"],
-  sourceUrl: "https://github.com/MJRaei/NanoRange",
+  liveUrl: "https://www.youtube.com/watch?v=aQSPLL43o8U",
+  sourceUrl: "https://github.com/MJRaei/NanORange",
   featured: true,
-  date: "2025-02",
+  date: "2025-11",
 };
