@@ -111,8 +111,8 @@ export const projects: Project[] = [
       "An AI-powered crystal structure analysis tool using RAG and agentic workflows to query, visualize, and compare materials from the Materials Project database.",
     description:
       "CrystaLenz is an agentic AI tool that lets researchers explore crystal structures through natural language. It uses Retrieval-Augmented Generation (RAG) combined with the Materials Project API and pymatgen to fetch, analyze, and visualize crystal data. Users can ask questions about materials, compare properties, and generate interactive 3D structure visualizations and property plots, all through a conversational interface powered by Google ADK.",
-    thumbnailUrl: "https://placehold.co/800x450/1a1a2e/e0e0e0?text=CrystaLenz",
-    images: ["https://placehold.co/800x450/1a1a2e/e0e0e0?text=CrystaLenz"],
+    thumbnailUrl: "/images/projects/crystalenz/workflow.png",
+    images: ["/images/projects/crystalenz/workflow.png"],
     tags: ["Python", "Google ADK", "RAG", "pymatgen", "mp-api", "SciPy", "Node.js", "React", "Tailwind CSS", "Plotly"],
     liveUrl: "https://www.youtube.com/watch?v=uNsnd1BLsTs&t=6s",
     sourceUrl: "https://github.com/MJRaei/CrystaLenz",
