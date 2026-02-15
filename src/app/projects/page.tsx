@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { ExternalLink, Github } from "lucide-react";
+import { Calendar, ExternalLink, Github } from "lucide-react";
 import { projects } from "@/data/projects";
+
+function formatDate(date: string) {
+  const [year, month] = date.split("-");
+  const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  return `${monthNames[parseInt(month, 10) - 1]} ${year}`;
+}
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { FadeIn } from "@/components/motion/fade-in";
@@ -39,7 +45,13 @@ export default function ProjectsPage() {
                   />
                 </div>
                 <div className="p-5">
-                  <h2 className="mb-1 font-semibold">{project.title}</h2>
+                  <div className="mb-1 flex items-center justify-between">
+                    <h2 className="font-semibold">{project.title}</h2>
+                    <span className="flex items-center gap-1 text-xs text-muted-foreground">
+                      <Calendar className="h-3 w-3" />
+                      {formatDate(project.date)}
+                    </span>
+                  </div>
                   <p className="mb-3 text-sm text-muted-foreground line-clamp-2">{project.summary}</p>
                   <div className="mb-3 flex flex-wrap gap-1.5">
                     {project.tags.slice(0, 3).map((tag) => (

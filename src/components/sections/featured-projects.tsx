@@ -1,6 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, ExternalLink, Github } from "lucide-react";
+import { ArrowRight, Calendar, ExternalLink, Github } from "lucide-react";
+
+function formatDate(date: string) {
+  const [year, month] = date.split("-");
+  const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  return `${monthNames[parseInt(month, 10) - 1]} ${year}`;
+}
 import { projects } from "@/data/projects";
 import { SectionWrapper } from "@/components/layout/section-wrapper";
 import { Card } from "@/components/ui/card";
@@ -39,7 +45,13 @@ export function FeaturedProjects() {
                   />
                 </div>
                 <div className="p-5">
-                  <h3 className="mb-1 font-semibold">{project.title}</h3>
+                  <div className="mb-1 flex items-center justify-between">
+                    <h3 className="font-semibold">{project.title}</h3>
+                    <span className="flex items-center gap-1 text-xs text-muted-foreground">
+                      <Calendar className="h-3 w-3" />
+                      {formatDate(project.date)}
+                    </span>
+                  </div>
                   <p className="mb-3 text-sm text-muted-foreground line-clamp-2">{project.summary}</p>
                   <div className="mb-3 flex flex-wrap gap-1.5">
                     {project.tags.slice(0, 3).map((tag) => (

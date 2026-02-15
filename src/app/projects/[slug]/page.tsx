@@ -2,7 +2,13 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, ExternalLink, Github } from "lucide-react";
+import { ArrowLeft, Calendar, ExternalLink, Github } from "lucide-react";
+
+function formatDate(date: string) {
+  const [year, month] = date.split("-");
+  const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  return `${monthNames[parseInt(month, 10) - 1]} ${year}`;
+}
 import { projects } from "@/data/projects";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -107,7 +113,13 @@ export default async function ProjectPage({ params }: Props) {
       </FadeIn>
 
       <FadeIn delay={0.1}>
-        <h1 className="mb-4 text-3xl font-bold tracking-tight">{project.title}</h1>
+        <div className="mb-4 flex items-center justify-between">
+          <h1 className="text-3xl font-bold tracking-tight">{project.title}</h1>
+          <span className="flex items-center gap-1.5 text-sm text-muted-foreground">
+            <Calendar className="h-4 w-4" />
+            {formatDate(project.date)}
+          </span>
+        </div>
         <div className="mb-6 flex flex-wrap gap-2">
           {project.tags.map((tag) => (
             <Badge key={tag}>{tag}</Badge>
