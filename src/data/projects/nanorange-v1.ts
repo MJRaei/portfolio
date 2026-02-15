@@ -1,0 +1,16 @@
+import { Project } from "@/types";
+
+export const nanorangeV1: Project = {
+  slug: "nanorange-v1",
+  title: "NanoRange V1",
+  summary:
+    "A web-based microscopy image analysis tool with automated segmentation, denoising, and particle measurement capabilities.",
+  description:
+    "The original NanoRange application that provides researchers with a streamlined interface for microscopy image analysis. It features automated image preprocessing, multiple segmentation algorithms, particle size measurement, and statistical analysis. Users upload microscopy images and select from a suite of processing tools to extract quantitative data, with results exported as detailed reports. This project laid the groundwork for the agentic V2 iteration.",
+  thumbnailUrl: "https://placehold.co/800x450/1a1a2e/e0e0e0?text=NanoRange+V1",
+  images: ["https://placehold.co/800x450/1a1a2e/e0e0e0?text=NanoRange+V1"],
+  tags: ["Python", "OpenCV", "scikit-image", "Flask", "React", "Tailwind CSS"],
+  sourceUrl: "https://github.com/MJRaei/NanoRange",
+  featured: true,
+  date: "2025-02",
+};
