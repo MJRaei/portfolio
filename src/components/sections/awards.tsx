@@ -24,7 +24,7 @@ export function Awards() {
             <div className="relative border-l-2 border-border pl-8">
               <div className="absolute -left-[9px] top-1 h-4 w-4 rounded-full border-2 border-border bg-background" />
               <div className="flex items-start gap-3">
-                <Trophy className="mt-0.5 h-5 w-5 flex-shrink-0 text-amber-500" />
+                <Trophy className="mt-0.5 h-5 w-5 shrink-0 text-amber-500" />
                 <div className="flex-1">
                   <h3 className="text-lg font-semibold">{award.title}</h3>
                   <p className="text-muted-foreground">{award.organization}</p>
