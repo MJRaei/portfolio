@@ -1,3 +1,4 @@
+import React from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
@@ -170,7 +171,7 @@ export default async function ProjectPage({ params }: Props) {
         <p className="mb-8 text-muted-foreground leading-relaxed">{project.description}</p>
 
         <div className="mb-12 flex flex-wrap gap-3">
-          {project.liveUrl && (
+          {project.liveUrl && !/youtube\.com\/watch\?v=/.test(project.liveUrl) && (
             <Button href={project.liveUrl} target="_blank" rel="noopener noreferrer">
               <ExternalLink className="h-4 w-4" /> Live Demo
             </Button>
@@ -183,13 +184,37 @@ export default async function ProjectPage({ params }: Props) {
         </div>
       </FadeIn>
 
-      {project.sections && (
-        <div className="border-t border-border pt-10">
-          {project.sections.map((section, i) => (
-            <Section key={section.title} section={section} index={i} />
-          ))}
-        </div>
-      )}
+      {project.sections && (() => {
+        const isYouTube = project.liveUrl && /youtube\.com\/watch\?v=/.test(project.liveUrl);
+        const overviewIdx = project.sections.findIndex((s) => s.title === "Overview");
+        const insertAfter = overviewIdx !== -1 ? overviewIdx : 0;
+
+        return (
+          <div className="border-t border-border pt-10">
+            {project.sections.map((section, i) => (
+              <React.Fragment key={section.title}>
+                <Section section={section} index={i} />
+                {isYouTube && i === insertAfter && (
+                  <FadeIn delay={0.1 * (i + 1)}>
+                    <div className="mb-12">
+                      <h2 className="mb-4 text-xl font-semibold tracking-tight">Demo Video</h2>
+                      <div className="relative aspect-video overflow-hidden rounded-xl border border-border bg-muted">
+                        <iframe
+                          src={`https://www.youtube.com/embed/${new URL(project.liveUrl!).searchParams.get("v")}`}
+                          title={`${project.title} Demo`}
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          className="absolute inset-0 h-full w-full"
+                        />
+                      </div>
+                    </div>
+                  </FadeIn>
+                )}
+              </React.Fragment>
+            ))}
+          </div>
+        );
+      })()}
     </div>
   );
 }
