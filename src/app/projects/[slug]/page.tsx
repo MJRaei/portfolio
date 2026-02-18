@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, Calendar, ExternalLink, Github } from "lucide-react";
+import { ArrowLeft, Calendar, ExternalLink, Github, Trophy } from "lucide-react";
 
 function formatDate(date: string) {
   const [year, month] = date.split("-");
@@ -125,6 +125,26 @@ export default async function ProjectPage({ params }: Props) {
             <Badge key={tag}>{tag}</Badge>
           ))}
         </div>
+
+        {project.award && (
+          project.awardUrl ? (
+            <a
+              href={project.awardUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mb-6 flex items-center gap-3 rounded-lg border border-amber-500/30 bg-amber-500/10 px-4 py-3 transition-colors hover:bg-amber-500/20"
+            >
+              <Trophy className="h-5 w-5 shrink-0 text-amber-500" />
+              <span className="text-sm font-medium text-amber-400">{project.award}</span>
+              <ExternalLink className="ml-auto h-4 w-4 shrink-0 text-amber-500/60" />
+            </a>
+          ) : (
+            <div className="mb-6 flex items-center gap-3 rounded-lg border border-amber-500/30 bg-amber-500/10 px-4 py-3">
+              <Trophy className="h-5 w-5 shrink-0 text-amber-500" />
+              <span className="text-sm font-medium text-amber-400">{project.award}</span>
+            </div>
+          )
+        )}
       </FadeIn>
 
       <FadeIn delay={0.2}>

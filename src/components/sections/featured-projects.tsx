@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Calendar, ExternalLink, Github } from "lucide-react";
+import { ArrowRight, Calendar, ExternalLink, Github, Trophy } from "lucide-react";
 
 function formatDate(date: string) {
   const [year, month] = date.split("-");
@@ -43,6 +43,12 @@ export function FeaturedProjects() {
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
+                  {project.award && (
+                    <div className="absolute top-2 right-2 flex items-center gap-1.5 rounded-full border border-amber-500/30 bg-amber-500/90 px-2.5 py-1 text-xs font-semibold text-white shadow-md backdrop-blur-sm">
+                      <Trophy className="h-3 w-3" />
+                      Award Winner
+                    </div>
+                  )}
                 </div>
                 <div className="p-5">
                   <div className="mb-1 flex items-center justify-between">

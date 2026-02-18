@@ -40,6 +40,8 @@ export interface Project {
   sourceUrl?: string;
   featured: boolean;
   date: string;
+  award?: string;
+  awardUrl?: string;
   sections?: ProjectSection[];
 }
 

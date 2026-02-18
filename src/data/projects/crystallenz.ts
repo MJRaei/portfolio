@@ -14,7 +14,14 @@ export const crystallenz: Project = {
   sourceUrl: "https://github.com/MJRaei/CrystaLenz",
   featured: true,
   date: "2025-09",
+  award: "4th Place — 2025 Hackathon on LLMs for Materials Science & Chemistry (Prize by Lila Sciences)",
+  awardUrl: "https://llmhackathon.github.io/awards/",
   sections: [
+    {
+      title: "Achievement",
+      content:
+        "CrystaLenz was ranked 4th among the top-scoring overall projects at the 2025 Hackathon on LLMs for Materials Science & Chemistry, a global competition with over 1,000 participants across 100+ teams worldwide.",
+    },
     {
       title: "Overview",
       content:
