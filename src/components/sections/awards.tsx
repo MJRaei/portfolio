@@ -55,6 +55,16 @@ export function Awards() {
                         View Project
                       </Link>
                     )}
+                    {award.sourceUrl && (
+                      <a
+                        href={award.sourceUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline underline-offset-4 hover:text-foreground"
+                      >
+                        Source Code
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>

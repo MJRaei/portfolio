@@ -28,4 +28,13 @@ export const awards: Award[] = [
     url: "https://llmhackathon.github.io/awards/",
     projectSlug: "crystallenz",
   },
+  {
+    title: "1st Place: SPE Datathon 2024",
+    organization: "Society of Petroleum Engineers (SPE)",
+    date: "2024-10",
+    description:
+      "Designed and implemented ML models (Random Forest, SARIMA) to forecast carbon emissions and support CCUS decision-making from large-scale climate data.",
+    url: "https://www.linkedin.com/feed/update/urn:li:activity:7254588094333493248/",
+    sourceUrl: "https://github.com/SarupaDebnath/SPEDatathon2024",
+  },
 ];

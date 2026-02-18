@@ -77,4 +77,5 @@ export interface Award {
   description?: string;
   url?: string;
   projectSlug?: string;
+  sourceUrl?: string;
 }
