@@ -177,7 +177,7 @@ export default async function ProjectPage({ params }: Props) {
             </Button>
           )}
           {project.sourceUrl && (
-            <Button variant="outline" href={project.sourceUrl} target="_blank" rel="noopener noreferrer">
+            <Button variant="secondary" href={project.sourceUrl} target="_blank" rel="noopener noreferrer">
               <Github className="h-4 w-4" /> Source Code
             </Button>
           )}
