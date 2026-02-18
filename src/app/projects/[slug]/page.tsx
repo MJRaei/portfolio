@@ -126,24 +126,29 @@ export default async function ProjectPage({ params }: Props) {
           ))}
         </div>
 
-        {project.award && (
-          project.awardUrl ? (
-            <a
-              href={project.awardUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mb-6 flex items-center gap-3 rounded-lg border border-amber-500/30 bg-amber-500/10 px-4 py-3 transition-colors hover:bg-amber-500/20"
-            >
-              <Trophy className="h-5 w-5 shrink-0 text-amber-500" />
-              <span className="text-sm font-medium text-amber-400">{project.award}</span>
-              <ExternalLink className="ml-auto h-4 w-4 shrink-0 text-amber-500/60" />
-            </a>
-          ) : (
-            <div className="mb-6 flex items-center gap-3 rounded-lg border border-amber-500/30 bg-amber-500/10 px-4 py-3">
-              <Trophy className="h-5 w-5 shrink-0 text-amber-500" />
-              <span className="text-sm font-medium text-amber-400">{project.award}</span>
-            </div>
-          )
+        {project.awards && project.awards.length > 0 && (
+          <div className="mb-6 space-y-2">
+            {project.awards.map((award, i) =>
+              award.url ? (
+                <a
+                  key={i}
+                  href={award.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 rounded-lg border border-amber-500/30 bg-amber-500/10 px-4 py-3 transition-colors hover:bg-amber-500/20"
+                >
+                  <Trophy className="h-5 w-5 shrink-0 text-amber-500" />
+                  <span className="text-sm font-medium text-amber-400">{award.label}</span>
+                  <ExternalLink className="ml-auto h-4 w-4 shrink-0 text-amber-500/60" />
+                </a>
+              ) : (
+                <div key={i} className="flex items-center gap-3 rounded-lg border border-amber-500/30 bg-amber-500/10 px-4 py-3">
+                  <Trophy className="h-5 w-5 shrink-0 text-amber-500" />
+                  <span className="text-sm font-medium text-amber-400">{award.label}</span>
+                </div>
+              )
+            )}
+          </div>
         )}
       </FadeIn>
 

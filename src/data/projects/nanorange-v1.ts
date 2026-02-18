@@ -28,7 +28,16 @@ export const nanorangeV1: Project = {
   sourceUrl: "https://github.com/MJRaei/NanoRange",
   featured: true,
   date: "2025-11",
+  awards: [
+    { label: "Theia Scientific Award at the 2025 Microscopy Hackathon", url: "https://kaliningroup.github.io/mic_hackathon_2/awards/" },
+    { label: "DENS Mystery Award at the 2025 Microscopy Hackathon", url: "https://kaliningroup.github.io/mic_hackathon_2/awards/" },
+  ],
   sections: [
+    {
+      title: "Achievement",
+      content:
+        "NanoRange V1 won two awards at the 2025 Microscopy Hackathon: the Theia Scientific Award and the DENS Mystery Award.",
+    },
     {
       title: "Overview",
       content:

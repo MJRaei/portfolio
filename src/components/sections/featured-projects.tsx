@@ -43,7 +43,7 @@ export function FeaturedProjects() {
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
-                  {project.award && (
+                  {project.awards && project.awards.length > 0 && (
                     <div className="absolute top-2 right-2 flex items-center gap-1.5 rounded-full border border-amber-500/30 bg-amber-500/90 px-2.5 py-1 text-xs font-semibold text-white shadow-md backdrop-blur-sm">
                       <Trophy className="h-3 w-3" />
                       Award Winner
