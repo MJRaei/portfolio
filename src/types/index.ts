@@ -69,3 +69,12 @@ export interface SkillCategory {
   category: string;
   skills: string[];
 }
+
+export interface Award {
+  title: string;
+  organization: string;
+  date: string;
+  description?: string;
+  url?: string;
+  projectSlug?: string;
+}
