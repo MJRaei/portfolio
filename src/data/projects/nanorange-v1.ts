@@ -14,6 +14,7 @@ export const nanorangeV1: Project = {
     "Python",
     "Google ADK",
     "Gemini",
+    "VLMs",
     "FastAPI",
     "Next.js",
     "React",

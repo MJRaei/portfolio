@@ -15,7 +15,7 @@ export const nanorangeV2: Project = {
     "/images/projects/nanorange-v2/demo_canvas.gif",
     "/images/projects/nanorange-v2/workflow.png",
   ],
-  tags: ["Python", "Google ADK", "Next.js", "Gemini", "TypeScript", "FastAPI", "SQLite", "Tailwind CSS"],
+  tags: ["Python", "Google ADK", "Next.js", "Gemini", "VLMs", "TypeScript", "FastAPI", "SQLite", "Tailwind CSS"],
   liveUrl: "https://www.youtube.com/watch?v=9ur8fZo4_lg",
   sourceUrl: "https://github.com/MJRaei/NanoRange-v2",
   featured: true,
