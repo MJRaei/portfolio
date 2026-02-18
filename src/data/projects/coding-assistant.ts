@@ -23,11 +23,6 @@ export const codingAssistant: Project = {
       title: "Workflow",
       content:
         "The system operates through two core pipelines. The Indexing Pipeline scans a codebase, chunks the source files using a configurable strategy, generates embeddings via the selected provider, and builds a FAISS vector index persisted to disk. The Retrieval Pipeline takes a natural-language query, embeds it with the same provider, performs semantic similarity search against the index, and returns ranked code snippets with metadata to an answering layer for Q&A, navigation, and code understanding.",
-      image: {
-        src: "/images/projects/coding-assistant/workflow.png",
-        alt: "Coding Assistant workflow diagram showing the Indexing Pipeline and Retrieval Pipeline",
-        caption: "End-to-end workflow: Indexing Pipeline (codebase → chunks → embeddings → FAISS index) and Retrieval Pipeline (query → semantic search → ranked context → answer)",
-      },
     },
     {
       title: "Chunking Strategies",
