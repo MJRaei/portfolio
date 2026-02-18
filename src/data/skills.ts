@@ -11,7 +11,7 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     category: "AI & Data Science",
-    skills: ["RAG", "FAISS", "scikit-learn", "XGBoost", "NumPy", "Pandas", "SciPy", "OpenCV", "Plotly"],
+    skills: ["RAG", "FAISS", "OpenAI", "Hugging Face", "Ollama", "NLP", "scikit-learn", "XGBoost", "NumPy", "Pandas", "SciPy", "OpenCV", "Plotly"],
   },
   {
     category: "Databases",
