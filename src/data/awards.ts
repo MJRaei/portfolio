@@ -37,4 +37,11 @@ export const awards: Award[] = [
     url: "https://www.linkedin.com/feed/update/urn:li:activity:7254588094333493248/",
     sourceUrl: "https://github.com/SarupaDebnath/SPEDatathon2024",
   },
+  {
+    title: "Alberta Innovates",
+    organization: "University of Calgary",
+    date: "2021-09",
+    description:
+      "This funding was provided for my master's studies to design novel materials for carbon capture in oil and gas industries.",
+  },
 ];
