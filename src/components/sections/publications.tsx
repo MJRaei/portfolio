@@ -1,4 +1,4 @@
-import { BookOpen, ScrollText } from "lucide-react";
+import { BookOpen, GraduationCap, ScrollText } from "lucide-react";
 import { publications } from "@/data/publications";
 import { SectionWrapper } from "@/components/layout/section-wrapper";
 import { FadeIn } from "@/components/motion/fade-in";
@@ -25,28 +25,32 @@ export function Publications() {
               <div className="flex items-start gap-3">
                 {pub.type === "patent" ? (
                   <ScrollText className="mt-0.5 h-5 w-5 shrink-0 text-blue-500" />
+                ) : pub.type === "thesis" ? (
+                  <GraduationCap className="mt-0.5 h-5 w-5 shrink-0 text-purple-500" />
                 ) : (
                   <BookOpen className="mt-0.5 h-5 w-5 shrink-0 text-emerald-500" />
                 )}
                 <div className="flex-1">
-                  <h3 className="text-lg font-semibold">{pub.title}</h3>
+                  {pub.url ? (
+                    <a
+                      href={pub.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <h3 className="text-lg font-semibold hover:underline">
+                        {pub.title}
+                      </h3>
+                    </a>
+                  ) : (
+                    <h3 className="text-lg font-semibold">{pub.title}</h3>
+                  )}
                   <p className="text-muted-foreground">{pub.authors}</p>
                   <p className="text-sm text-muted-foreground">{pub.venue}</p>
                   <p className="mb-3 text-sm text-muted-foreground">
                     {formatDate(pub.date)}
                   </p>
-                  <div className="mt-3 flex flex-wrap gap-3 text-sm">
-                    {pub.url && (
-                      <a
-                        href={pub.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="underline underline-offset-4 hover:text-foreground"
-                      >
-                        View {pub.type === "patent" ? "Patent" : "Paper"}
-                      </a>
-                    )}
-                    {pub.doi && (
+                  {pub.doi && (
+                    <div className="mt-3 text-sm">
                       <a
                         href={`https://doi.org/${pub.doi}`}
                         target="_blank"
@@ -55,8 +59,8 @@ export function Publications() {
                       >
                         DOI
                       </a>
-                    )}
-                  </div>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

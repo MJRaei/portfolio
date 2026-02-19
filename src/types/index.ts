@@ -85,7 +85,7 @@ export interface Publication {
   authors: string;
   venue: string;
   date: string;
-  type: "publication" | "patent";
+  type: "publication" | "patent" | "thesis";
   url?: string;
   doi?: string;
 }
