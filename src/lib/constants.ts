@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Mohammad Javad Raei",
-  url: "https://johndoe.dev",
-  description: "Full-Stack Developer portfolio showcasing projects, experience, and skills.",
+  url: "https://mjavadraei.com",
+  description: "Scientific Software Developer portfolio showcasing projects, experience, and skills.",
 };
 
 export const navLinks = [

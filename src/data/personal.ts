@@ -3,8 +3,8 @@ import { PersonalInfo } from "@/types";
 export const personalInfo: PersonalInfo = {
   name: "Mohammad Javad Raei",
   title: "Scientific Software Developer",
-  email: "hello@johndoe.dev",
-  location: "San Francisco, CA",
+  email: "raei.mohammadjavad@gmail.com",
+  location: "Alberta, Canada",
   bio: "I build tools at the intersection of chemical engineering, materials science, and agentic AI to accelerate scientific discovery.",
   aboutParagraphs: [
     "I'm a scientific software developer with a Master's in Chemical Engineering and hands-on experience in materials synthesis and laboratory research. I build intelligent tools that bridge materials science and agentic AI to accelerate scientific discovery and analysis.",
