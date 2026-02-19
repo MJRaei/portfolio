@@ -24,7 +24,8 @@ function lerp(a: number, b: number, t: number) {
 }
 
 function getColor(stops: typeof lightStops, progress: number) {
-  const segment = progress * (stops.length - 1);
+  const clamped = Math.max(0, Math.min(1, progress || 0));
+  const segment = clamped * (stops.length - 1);
   const index = Math.min(Math.floor(segment), stops.length - 2);
   const t = segment - index;
   const from = stops[index];
