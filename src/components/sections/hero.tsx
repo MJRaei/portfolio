@@ -1,4 +1,4 @@
-import { ArrowDown, FileText } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import { personalInfo } from "@/data/personal";
 import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/motion/fade-in";
@@ -33,10 +33,10 @@ export function Hero() {
               <ArrowDown className="h-4 w-4" />
               View Projects
             </Button>
-            <Button variant="outline" href={personalInfo.resumeUrl} target="_blank" rel="noopener noreferrer">
+            {/* <Button variant="outline" href={personalInfo.resumeUrl} target="_blank" rel="noopener noreferrer">
               <FileText className="h-4 w-4" />
               Download Resume
-            </Button>
+            </Button> */}
           </div>
         </FadeIn>
       </div>
