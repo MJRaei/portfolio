@@ -79,3 +79,13 @@ export interface Award {
   projectSlug?: string;
   sourceUrl?: string;
 }
+
+export interface Publication {
+  title: string;
+  authors: string;
+  venue: string;
+  date: string;
+  type: "publication" | "patent";
+  url?: string;
+  doi?: string;
+}
