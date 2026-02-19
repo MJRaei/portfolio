@@ -29,12 +29,7 @@ export function Publications() {
                   <BookOpen className="mt-0.5 h-5 w-5 shrink-0 text-emerald-500" />
                 )}
                 <div className="flex-1">
-                  <div className="flex items-center gap-2">
-                    <h3 className="text-lg font-semibold">{pub.title}</h3>
-                    <span className="rounded-full border border-border px-2 py-0.5 text-xs text-muted-foreground">
-                      {pub.type === "patent" ? "Patent" : "Publication"}
-                    </span>
-                  </div>
+                  <h3 className="text-lg font-semibold">{pub.title}</h3>
                   <p className="text-muted-foreground">{pub.authors}</p>
                   <p className="text-sm text-muted-foreground">{pub.venue}</p>
                   <p className="mb-3 text-sm text-muted-foreground">
