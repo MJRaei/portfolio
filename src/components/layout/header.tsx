@@ -3,10 +3,17 @@
 import Link from "next/link";
 import { useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Github, Linkedin, GraduationCap } from "lucide-react";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { navLinks, siteConfig } from "@/lib/constants";
+import { personalInfo } from "@/data/personal";
 import { cn } from "@/lib/utils";
+
+const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+  Github,
+  Linkedin,
+  GraduationCap,
+};
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -48,13 +55,43 @@ export function Header() {
               {link.label}
             </Link>
           ))}
-          <div className="ml-2">
+          <div className="ml-2 flex items-center gap-1">
+            {personalInfo.socialLinks.map((link) => {
+              const Icon = iconMap[link.icon];
+              return (
+                <a
+                  key={link.platform}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex h-9 w-9 items-center justify-center rounded-md text-muted-foreground transition-colors hover:text-foreground"
+                  aria-label={link.platform}
+                >
+                  {Icon && <Icon className="h-4 w-4" />}
+                </a>
+              );
+            })}
             <ThemeToggle />
           </div>
         </div>
 
         {/* Mobile nav trigger */}
-        <div className="flex items-center gap-2 md:hidden">
+        <div className="flex items-center gap-1 md:hidden">
+          {personalInfo.socialLinks.map((link) => {
+            const Icon = iconMap[link.icon];
+            return (
+              <a
+                key={link.platform}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-md text-muted-foreground transition-colors hover:text-foreground"
+                aria-label={link.platform}
+              >
+                {Icon && <Icon className="h-4 w-4" />}
+              </a>
+            );
+          })}
           <ThemeToggle />
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
