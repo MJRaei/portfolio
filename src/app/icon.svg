@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1a1a"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </linearGradient>
+  </defs>
+  <!-- Background rounded square -->
+  <rect width="512" height="512" rx="96" fill="url(#g)"/>
+  <!-- Abstract geometric: two overlapping angle brackets forming a diamond -->
+  <g stroke="#fafafa" stroke-width="36" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Left bracket < -->
+    <polyline points="220,148 124,256 220,364"/>
+    <!-- Right bracket > -->
+    <polyline points="292,148 388,256 292,364"/>
+  </g>
+</svg>
