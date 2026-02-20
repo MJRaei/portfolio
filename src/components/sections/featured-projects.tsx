@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Calendar, ExternalLink, Github, Trophy } from "lucide-react";
+import { ArrowRight, Calendar, Github, Trophy, Youtube } from "lucide-react";
 
 function formatDate(date: string) {
   const [year, month] = date.split("-");
@@ -72,7 +72,7 @@ export function FeaturedProjects() {
                     )}
                     {project.liveUrl && (
                       <span className="text-muted-foreground">
-                        <ExternalLink className="h-4 w-4" />
+                        <Youtube className="h-4 w-4" />
                       </span>
                     )}
                   </div>
