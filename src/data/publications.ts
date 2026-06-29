@@ -3,6 +3,16 @@ import { Publication } from "@/types";
 export const publications: Publication[] = [
   {
     title:
+      "From Knowledge to Action: Outcomes of the 2025 Large Language Model (LLM) Hackathon for Applications in Materials Science and Chemistry",
+    authors:
+      "A. Roy, K. Shen, A. MacBride, A. Oladipupo, M. Taskeen, W. Treyde, ...",
+    venue: "arXiv e-prints",
+    date: "2026-05",
+    type: "publication",
+    url: "https://ui.adsabs.harvard.edu/abs/2026arXiv260503205R/abstract",
+  },
+  {
+    title:
       "One-Step Synthesis of Nitrogen/Sulfur Codoped Graphene/MnO2 Film as a High-Performance Supercapacitor",
     authors: "M. J. Raei, M. Trifkovic, E. P. L. Roberts, G. Natale",
     venue: "ACS Applied Energy Materials",
