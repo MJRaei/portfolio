@@ -3,6 +3,14 @@ import { Publication } from "@/types";
 export const publications: Publication[] = [
   {
     title:
+      "NanoRange: A Modular Framework for Automated Cryo-EM Particle Detection and Morphometric Analysis",
+    authors: "S. A. Golsorkhi, M. J. Raei, F. J. Alvarez, M. Mamak",
+    venue: "Microscopy and Microanalysis",
+    date: "2026-07",
+    type: "publication",
+  },
+  {
+    title:
       "From Knowledge to Action: Outcomes of the 2025 Large Language Model (LLM) Hackathon for Applications in Materials Science and Chemistry",
     authors:
       "A. Roy, K. Shen, A. MacBride, A. Oladipupo, M. Taskeen, W. Treyde, ...",
