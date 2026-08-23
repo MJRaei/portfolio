@@ -7,9 +7,9 @@ export const personalInfo: PersonalInfo = {
   location: "Alberta, Canada",
   bio: "I build agentic AI systems that reason, retrieve, and act reliably enough to trust in production.",
   aboutParagraphs: [
-    "I'm a scientific software developer with a Master's in Chemical Engineering and hands-on experience in materials synthesis and laboratory research. I build intelligent tools that bridge materials science and agentic AI to accelerate scientific discovery and analysis.",
-    "Professionally, I develop engineering software in the oil and gas industry. Outside of work, I build AI-powered tools for materials characterization and scientific analysis, work that has earned me four prizes across two hackathons.",
-    "When I'm not coding or experimenting, you'll find me behind the camera, I'm passionate about photography and video editing."
+    "I'm an AI engineer focused on agent design: how tools get exposed to a model, how state persists across a run, and how you know whether a system actually worked. I build multi-agent systems, retrieval-grounded architectures, and the eval harnesses that measure reliability rather than just demo well.",
+    "Professionally, I develop engineering software in the oil and gas industry. Outside of work, I build agentic AI tools for scientific research, work that has earned me four prizes across two hackathons.",
+    "When I'm not coding or experimenting, you'll find me behind the camera. I'm passionate about photography and video editing."
   ],
   avatarUrl: "/images/personal/my-picture.jpg",
   resumeUrl: "/files/resume.pdf",
