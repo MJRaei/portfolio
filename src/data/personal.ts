@@ -5,7 +5,7 @@ export const personalInfo: PersonalInfo = {
   title: "Scientific Software Developer",
   email: "raei.mohammadjavad@gmail.com",
   location: "Alberta, Canada",
-  bio: "I build tools at the intersection of chemical engineering, materials science, and agentic AI to accelerate scientific discovery.",
+  bio: "I build agentic AI systems that reason, retrieve, and act reliably enough to trust in production.",
   aboutParagraphs: [
     "I'm a scientific software developer with a Master's in Chemical Engineering and hands-on experience in materials synthesis and laboratory research. I build intelligent tools that bridge materials science and agentic AI to accelerate scientific discovery and analysis.",
     "Professionally, I develop engineering software in the oil and gas industry. Outside of work, I build AI-powered tools for materials characterization and scientific analysis, work that has earned me four prizes across two hackathons.",
