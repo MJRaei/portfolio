@@ -8,7 +8,7 @@ export const education: Education[] = [
     startDate: "2021-09",
     endDate: "2023-09",
     description: [
-      "Thesis: Design of graphene/metal oxide aerogels for carbon capture and electrochemical energy storage",
+      "Applied design of experiments and response surface methods to optimize experimental conditions, with data pipelines for processing, regression modelling, and analysis.",
     ],
   },
   {
