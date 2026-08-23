@@ -39,20 +39,4 @@ export const experiences: Experience[] = [
     technologies: ["Python", "Scikit-learn", "XGBoost", "SARIMA", "Autoencoders", "C#", "SQL", "Pandas", "NumPy", "Selenium", "Git"],
     companyUrl: "https://processecology.com/",
   },
-  {
-    company: "University of Calgary",
-    role: "Research Assistant",
-    location: "Alberta, Canada",
-    startDate: "2021-09",
-    endDate: "2023-09",
-    description: [
-      "Designed and synthesized novel graphene/metal oxide aerogels for carbon capture and electrochemical energy storage, resulting in a US patent filing and two journal paper submissions.",
-      "Applied statistical and machine learning techniques (PCA, Gradient Descent) to optimize synthesis parameters, improving energy efficiency and material performance.",
-      "Preprocessed and analyzed experimental datasets, handling outliers, missing data, and experimental errors to ensure reliable and reproducible results.",
-      "Characterized materials using a wide range of techniques including XRD, SEM, TEM, XPS, Raman, and electrochemical testing (EIS, cyclic voltammetry).",
-      "Fabricated all-solid-state supercapacitors for flexible electronics, bridging materials synthesis with device-level performance evaluation.",
-      "Authored standard operating procedures and technical reports for electrode preparation and characterization workflows.",
-    ],
-    technologies: ["Python", "PCA", "XRD", "SEM", "TEM", "XPS", "Raman", "Electrochemical Analysis"],
-  },
 ];
