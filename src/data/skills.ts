@@ -18,10 +18,6 @@ export const skillCategories: SkillCategory[] = [
     skills: ["PostgreSQL", "MongoDB", "SQLite", "Redis"],
   },
   {
-    category: "Materials Science",
-    skills: ["XRD", "SEM", "TEM", "XPS", "Raman Spectroscopy", "Electrochemical Analysis", "pymatgen", "mp-api"],
-  },
-  {
     category: "Tools & Platforms",
     skills: ["Git", "Docker", "AWS", "Vercel", "Linux", "Selenium"],
   },
