@@ -27,7 +27,7 @@ export const nanorangeV1: Project = {
   ],
   liveUrl: "https://www.youtube.com/watch?v=aQSPLL43o8U",
   sourceUrl: "https://github.com/MJRaei/NanoRange",
-  featured: true,
+  featured: false,
   date: "2025-11",
   awards: [
     { label: "Theia Scientific Award at the 2025 Microscopy Hackathon", url: "https://kaliningroup.github.io/mic_hackathon_2/awards/" },

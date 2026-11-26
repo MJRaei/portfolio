@@ -8,7 +8,7 @@ export const personalInfo: PersonalInfo = {
   bio: "I build agentic AI systems that reason, retrieve, and act reliably enough to trust in production.",
   aboutParagraphs: [
     "I'm an AI engineer focused on agent design: how tools get exposed to a model, how state persists across a run, and how you know whether a system actually worked. I build multi-agent systems, retrieval-grounded architectures, and the eval harnesses that measure reliability rather than just demo well.",
-    "Professionally, I develop engineering software in the oil and gas industry. Outside of work, I build agentic AI tools for scientific research, work that has earned me four prizes across two hackathons.",
+    "Professionally, I develop engineering software in the oil and gas industry. Outside of work, I build agentic AI tools for scientific research, work that has earned me six prizes across three hackathons.",
     "When I'm not coding or experimenting, you'll find me behind the camera. I'm passionate about photography and video editing."
   ],
   avatarUrl: "/images/personal/my-picture.jpg",
