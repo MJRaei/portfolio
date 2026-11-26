@@ -2,6 +2,24 @@ import { Award } from "@/types";
 
 export const awards: Award[] = [
   {
+    title: "MDRI Horizon Award",
+    organization: "OSI Hackathon 2026",
+    date: "2026-10",
+    description:
+      "SciPatch was one of 10 projects to receive the MDRI Horizon Award (Materials Discovery Research Institute), a cash prize, among 183 entries from more than 200 teams.",
+    url: "https://scientificintelligence.org/campaigns/osi-hackathon-2026/results",
+    projectSlug: "scipatch",
+  },
+  {
+    title: "Judge's Star",
+    organization: "OSI Hackathon 2026",
+    date: "2026-10",
+    description:
+      "Second award for SciPatch at the same hackathon. Each judge could give a Judge's Star to only one project they felt deserved more credit.",
+    url: "https://scientificintelligence.org/campaigns/osi-hackathon-2026/results",
+    projectSlug: "scipatch",
+  },
+  {
     title: "4th Place: Prize by Lila Sciences",
     organization: "2025 Hackathon on LLMs for Materials Science & Chemistry",
     date: "2025-09",
